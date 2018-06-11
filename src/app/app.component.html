@@ -1,0 +1,22 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>First Row</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
+<nav mat-tab-nav-bar class="flex-container">
+  <mat-toolbar color="primary" class="tab-nav" display="flex">
+    <mat-toolbar-row>
+      <span class="fill-remaining-space"></span>
+      <a mat-tab-link [routerLink]="['/home']" routerLinkActive>
+        <mat-icon>playlist_add</mat-icon>
+      </a>
+      <!-- This fills the remaining space of the current row -->
+      <span class="fill-remaining-space"></span>
+      <a mat-tab-link [routerLink]="['/blog']" routerLinkActive>
+        <mat-icon>description</mat-icon>
+      </a>
+      <span class="fill-remaining-space"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
